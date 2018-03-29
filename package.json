@@ -1,0 +1,40 @@
+{
+  "name": "firebasecontroller",
+  "version": "1.0.0",
+  "description": "A simple app for control of a firebase database",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "npm-run-all clean compile",
+    "clean": "rm -rf build",
+    "compile": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/JPCMarques/FirebaseController"
+  },
+  "keywords": [
+    "Firebase",
+    "controller",
+    "database",
+    "remote"
+  ],
+  "author": "JPCMarques",
+  "license": "ISC",
+  "dependencies": {
+    "@types/inquirer": "0.0.38",
+    "@types/winston": "^2.3.8",
+    "events": "^2.0.0",
+    "firebase": "^4.11.0",
+    "fs": "0.0.1-security",
+    "get-stdin": "^6.0.0",
+    "inquirer": "^5.1.0",
+    "npm-run-all": "^4.1.2",
+    "winston": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/get-stdin": "^5.0.1",
+    "@types/node": "^9.4.7",
+    "typescript": "^2.7.2"
+  }
+}
