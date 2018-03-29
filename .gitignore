@@ -1,6 +1,7 @@
 # Directories
 node_modules/
 build/
+logs/
 
 # Generated Files
 package-lock.json

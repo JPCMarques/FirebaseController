@@ -5,7 +5,7 @@ import "firebase/database";
 import * as winston from "winston";
 
 import { isUndefined } from "util";
-import { Constants } from "./constants";
+import { SharedConstants } from "./constants";
 import { IApp } from "./interfaces/firebase/content/app";
 import { IBlogPost, PostType } from "./interfaces/firebase/content/blog";
 import { INovel } from "./interfaces/firebase/content/novel";
@@ -118,7 +118,7 @@ export class FirebaseHandler {
         return this.getData(BaseRefs.DATA_STORE).then((snapshot) => {
             return this.dataStore = snapshot.val();
         }).catch((err) => {
-            logError(Constants.DATA_FETCH_FAIL, {attempt: 3 - attempts, message: err});
+            logError(SharedConstants.DATA_FETCH_FAIL, {attempt: 3 - attempts, message: err});
             if (attempts !== 0) { return this.loadDataStore(--attempts); }
             return err;
         });

@@ -1,6 +1,6 @@
 import { isNullOrUndefined } from "util";
 import * as winston from "winston";
-import { Constants } from "../constants";
+import { SharedConstants } from "../constants";
 import { logError, logInfo } from "../util/logController";
 import { Command, ICommandMessage } from "./command";
 import { NewAppData } from "./newAppData";
@@ -20,7 +20,7 @@ export class CommandController {
                 });
             }).catch((err) => {
                 if (isNullOrUndefined(err)) {
-                    logError(Constants.UNKNOWN_ERROR);
+                    logError(SharedConstants.UNKNOWN_ERROR);
                 } else {
                     logError(err);
                 }
